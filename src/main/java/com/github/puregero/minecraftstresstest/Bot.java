@@ -19,12 +19,12 @@ public class Bot extends ChannelInboundHandlerAdapter {
     private static final double CENTER_Z = Double.parseDouble(System.getProperty("bot.z", "0"));
     private static final boolean LOGS = Boolean.parseBoolean(System.getProperty("bot.logs", "true"));
     private static final boolean Y_AXIS = Boolean.parseBoolean(System.getProperty("bot.yaxis", "true"));
-    private static final int VIEW_DISTANCE = Integer.parseInt(System.getProperty("bot.viewdistance", "2"));
+    private static final int VIEW_DISTANCE = Integer.parseInt(System.getProperty("bot.viewdistance", "12"));
     private static final int RESOURCE_PACK_RESPONSE = Integer.parseInt(System.getProperty("bot.resource.pack.response", "3"));
 
     private static final Executor ONE_TICK_DELAY = CompletableFuture.delayedExecutor(50, TimeUnit.MILLISECONDS);
 
-    public static final String DEFAULT_SPEED = "0.1";
+    public static final String DEFAULT_SPEED = "0.2";
     public static double SPEED = Double.parseDouble(System.getProperty("bot.speed", DEFAULT_SPEED));
     public static final String DEFAULT_RADIUS = "1000";
     public static double RADIUS = Double.parseDouble(System.getProperty("bot.radius", DEFAULT_RADIUS));
